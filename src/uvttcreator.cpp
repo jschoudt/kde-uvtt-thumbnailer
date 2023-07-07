@@ -26,7 +26,10 @@ bool UvttCreator::create(const QString &path, int w, int h, QImage &img) {
     const QJsonValue image = uvttDoc.object()["image"];
     QByteArray imageData = QByteArray::fromBase64(image.toString().toUtf8());
     img.loadFromData(imageData);
-    img = img.scaled(w,h);
+    img = img.scaled(w,h,Qt::KeepAspectRatio);
+    if (img.isNull()) {
+        return false;
+    }
     return true;
 }
 
