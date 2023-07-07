@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Service
+Name=Universal VTT Files
+X-KDE-ServiceTypes=ThumbCreator
+MimeType=application/x-universal-vtt;
+X-KDE-Library=uvttthumbnailer
+CacheThumbnail=true
+IgnoreMaximumSize=true
+ThumbnailerVersion=2
